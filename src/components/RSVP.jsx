@@ -99,17 +99,6 @@ export default function RSVP() {
                 />
               </div>
 
-              {/* Mailing Address */}
-              <div>
-                <label htmlFor="rsvp-address" className={labelClass}>{t.rsvp.addressLabel} *</label>
-                <textarea
-                  id="rsvp-address" name="mailingAddress" required rows={3}
-                  placeholder={t.rsvp.addressPH}
-                  value={form.mailingAddress} onChange={handleChange}
-                  className={`${inputClass} resize-none`}
-                />
-              </div>
-
               {/* Attending */}
               <fieldset>
                 <legend className={labelClass}>{t.rsvp.attendingLabel} *</legend>
@@ -129,6 +118,17 @@ export default function RSVP() {
 
               {isAttending && (
                 <>
+                  {/* Mailing Address */}
+                  <div>
+                    <label htmlFor="rsvp-address" className={labelClass}>{t.rsvp.addressLabel} *</label>
+                    <textarea
+                      id="rsvp-address" name="mailingAddress" required rows={3}
+                      placeholder={t.rsvp.addressPH}
+                      value={form.mailingAddress} onChange={handleChange}
+                      className={`${inputClass} resize-none`}
+                    />
+                  </div>
+
                   {/* Adults */}
                   <div>
                     <label htmlFor="rsvp-adultCount" className={labelClass}>{t.rsvp.adultCountLabel}</label>
