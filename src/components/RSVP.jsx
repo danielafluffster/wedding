@@ -7,9 +7,8 @@ const INITIAL = {
   name:        '',
   attending:   '',
   plusOne:     '',
-  guestCount:  '1',
-  meal:        '',
-  meal2:       '',
+  children:    '',
+  childCount:  '',
   dietary:     '',
   songRequest: '',
 };
@@ -122,7 +121,6 @@ export default function RSVP() {
                   {/* Plus one */}
                   <fieldset>
                     <legend className={labelClass}>{t.rsvp.plusOneLabel}</legend>
-                    <p className="font-sans text-xs text-gray-400 mb-2">{t.rsvp.plusOneNote}</p>
                     <div className="flex gap-6 mt-1">
                       {[t.rsvp.plusOneYes, t.rsvp.plusOneNo].map(opt => (
                         <label key={opt} className="flex items-center gap-2 cursor-pointer">
@@ -137,44 +135,34 @@ export default function RSVP() {
                     </div>
                   </fieldset>
 
-                  {/* Guest count */}
-                  <div>
-                    <label htmlFor="rsvp-count" className={labelClass}>{t.rsvp.guestCountLabel} *</label>
-                    <select
-                      id="rsvp-count" name="guestCount"
-                      value={form.guestCount} onChange={handleChange}
-                      className={inputClass}
-                    >
-                      {[1, 2].map(n => <option key={n} value={n}>{n}</option>)}
-                    </select>
-                  </div>
+                  {/* Children */}
+                  <fieldset>
+                    <legend className={labelClass}>{t.rsvp.childrenLabel}</legend>
+                    <div className="flex gap-6 mt-1">
+                      {[t.rsvp.childrenYes, t.rsvp.childrenNo].map(opt => (
+                        <label key={opt} className="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio" name="children" value={opt}
+                            checked={form.children === opt} onChange={handleChange}
+                            className="accent-french-blue w-4 h-4"
+                          />
+                          <span className="font-sans text-sm text-gray-700">{opt}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </fieldset>
 
-                  {/* Meal — Guest 1 */}
-                  <div>
-                    <label htmlFor="rsvp-meal" className={labelClass}>
-                      {form.guestCount === '2' ? t.rsvp.meal1LabelG1 : t.rsvp.meal1Label} *
-                    </label>
-                    <select
-                      id="rsvp-meal" name="meal" required
-                      value={form.meal} onChange={handleChange}
-                      className={inputClass}
-                    >
-                      <option value="" disabled>{t.rsvp.mealPlaceholder}</option>
-                      {wedding.rsvp.mealChoices.map(m => <option key={m} value={m}>{m}</option>)}
-                    </select>
-                  </div>
-
-                  {/* Meal — Guest 2 */}
-                  {form.guestCount === '2' && (
+                  {/* Child count */}
+                  {form.children === t.rsvp.childrenYes && (
                     <div>
-                      <label htmlFor="rsvp-meal2" className={labelClass}>{t.rsvp.meal2Label} *</label>
+                      <label htmlFor="rsvp-childCount" className={labelClass}>{t.rsvp.childCountLabel}</label>
                       <select
-                        id="rsvp-meal2" name="meal2" required
-                        value={form.meal2} onChange={handleChange}
+                        id="rsvp-childCount" name="childCount"
+                        value={form.childCount} onChange={handleChange}
                         className={inputClass}
                       >
-                        <option value="" disabled>{t.rsvp.mealPlaceholder}</option>
-                        {wedding.rsvp.mealChoices.map(m => <option key={m} value={m}>{m}</option>)}
+                        <option value="" disabled>Select…</option>
+                        {[1, 2, 3, '4+'].map(n => <option key={n} value={n}>{n}</option>)}
                       </select>
                     </div>
                   )}

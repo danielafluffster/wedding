@@ -19,11 +19,11 @@ export const wedding = {
 
   // ── OUR STORY ─────────────────────────────────────────────────
   story: {
-    intro: `We were both deep in our PhDs at Texas Tech when we found each other. Jed was in Economics, doing research in Japanese history. Dani was in Chemical Engineering, focused on sustainability. Two completely different paths — and then, somehow, one common one.`,
+    intro: `We met in the fall of 2024 at Texas Tech — both in the middle of our PhDs, both a little too busy, and neither of us really looking. Jed was in Economics, doing research in Japanese history. Dani was in Chemical Engineering, working on sustainability. Different buildings, different worlds. And then, not so much.`,
 
-    body: `Our first date was September 21, 2024, at J&B Café in Lubbock. It was a rainy day. We got a chai latte and a cold brew, shared a blueberry muffin, and sat there talking for hours. The kind of talking where you don't notice the rain outside or how long it's been. Something clicked that afternoon, quietly and completely.`,
+    body: `Our first date was September 21, 2024, at J&B Café in Lubbock. It was raining. We got a chai latte, a cold brew, and a blueberry muffin to share, and sat there for hours talking until we noticed the place had emptied out around us. It felt easy from the start — and we both knew that meant something.`,
 
-    adventures: `What came after was just us building our thing. December 2024 we packed the car — Lubbock to Flagstaff to Las Vegas together for the first time. Jed's city. Desert sunsets, long drives, no agenda. From there we just kept going: Jed's graduation, our first trip to Omaha, Thanksgiving together, an anniversary worth celebrating, Denver, and back to Vegas more times than we can count. In 2026 we took on the Tehachapi Trail — windswept ridges, wide open skies, and the easy feeling that this is exactly who we want beside us on every climb.`,
+    adventures: `After that, things just kept going. December 2024 we took our first road trip — Lubbock to Flagstaff to Las Vegas, Jed's city, together for the first time. Then Jed's graduation, a first Thanksgiving, our first anniversary, Omaha, Denver, and Vegas more times than we can count. In 2026 we hiked the Tehachapi Trail — windy, beautiful, just the two of us. Every trip a little more like home.`,
 
     proposal: `[The proposal chapter — coming soon. ✨ Add it here once it happens!]`,
   },
@@ -80,7 +80,7 @@ export const wedding = {
   //   3. Copy the form ID (looks like "xyzabc12") and paste it below.
   //   4. In Formspree, set the notification email to wherever you want RSVP emails.
   rsvp: {
-    formspreeId: 'YOUR_FORM_ID',      // ← CHANGE THIS after Formspree setup
+    formspreeId: 'xpqgabnj',      // ← CHANGE THIS after Formspree setup
     deadline:    'To Be Announced',   // ← CHANGE THIS once you have a date
     mealChoices: [
       'Herb Roasted Chicken',
