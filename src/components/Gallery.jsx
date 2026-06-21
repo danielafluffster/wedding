@@ -20,7 +20,12 @@ function GalleryItem({ src, alt, ratio, index, onOpen, addPhotoLabel }) {
       aria-label={`View photo: ${alt}`}
     >
       {src ? (
-        <img src={src} alt={alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+        <>
+          <img src={src} alt={alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy/80 to-transparent px-3 py-3">
+            <p className="font-sans text-[11px] text-ivory leading-snug">{alt}</p>
+          </div>
+        </>
       ) : (
         <div className={`w-full h-full bg-gradient-to-br ${grad} flex items-end`}>
           <p className="font-sans text-[11px] text-ivory/50 p-3 leading-tight w-full text-center">

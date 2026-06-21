@@ -221,11 +221,11 @@ export const wedding = {
   // Put your images in the /public/images/ folder.
   gallery: [
     { src: '/images/cornmaze.jpg',      alt: 'Second date at the corn maze',                         ratio: '4/3' },
-    { src: '/images/buddy-holly.jpg',   alt: 'Buddy Holly, Lubbock TX',                              ratio: '3/4' },
-    { src: '/images/farmers-market.jpg',alt: 'Farmers market',                                       ratio: '4/3' },
-    { src: '/images/flagstaff.jpg',     alt: 'Flagstaff, Arizona',                                   ratio: '1/1' },
-    { src: '/images/bandeja-paisa.jpg', alt: 'Jed trying bandeja paisa for the first time',          ratio: '4/3' },
-    { src: '/images/paintings.jpg',     alt: 'Painting together',                                    ratio: '3/4' },
+    { src: '/images/buddy-holly.jpg',   alt: 'Buddy Holly statue in Lubbock, TX',                   ratio: '3/4' },
+    { src: '/images/farmers-market.jpg',alt: 'A morning at the farmers market',                      ratio: '4/3' },
+    { src: '/images/flagstaff.jpg',     alt: 'Flagstaff, Arizona — on the road back from Vegas',    ratio: '1/1' },
+    { src: '/images/bandeja-paisa.jpg', alt: 'Jed trying Colombian food for the first time',        ratio: '4/3' },
+    { src: '/images/paintings.jpg',     alt: 'Painting together in Lubbock',                         ratio: '3/4' },
     { src: null, alt: 'First date at J&B Café, September 21 2024',             ratio: '4/3' },
     { src: null, alt: 'Arriving in Las Vegas',                                  ratio: '1/1' },
     { src: null, alt: 'The two of us',                                          ratio: '4/3' },
