@@ -21,9 +21,9 @@ function GalleryItem({ src, alt, ratio, index, onOpen, addPhotoLabel }) {
     >
       {src ? (
         <>
-          <img src={src} alt={alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy/80 to-transparent px-3 py-3">
-            <p className="font-sans text-[11px] text-ivory leading-snug">{alt}</p>
+          <img src={src} alt={alt} className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:blur-[2px] group-hover:brightness-75" loading="lazy" />
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400 px-4">
+            <p className="font-sans text-sm text-ivory text-center leading-snug drop-shadow-md">{alt}</p>
           </div>
         </>
       ) : (
@@ -33,7 +33,6 @@ function GalleryItem({ src, alt, ratio, index, onOpen, addPhotoLabel }) {
           </p>
         </div>
       )}
-      <div className="absolute inset-0 bg-navy/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
     </button>
   );
 }

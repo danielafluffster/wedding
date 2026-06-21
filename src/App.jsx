@@ -9,7 +9,6 @@ import RSVP from './components/RSVP';
 import Travel from './components/Travel';
 import ThingsToDo from './components/ThingsToDo';
 import Registry from './components/Registry';
-import WeddingParty from './components/WeddingParty';
 import DressCode from './components/DressCode';
 import FAQ from './components/FAQ';
 import Gallery from './components/Gallery';
@@ -43,7 +42,6 @@ export default function App() {
         <Travel />
         <ThingsToDo />
         <Registry />
-        <WeddingParty />
         <DressCode />
         <FAQ />
         <Gallery />
