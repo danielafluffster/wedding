@@ -6,9 +6,8 @@ import { useT } from '../hooks/useT';
 const INITIAL = {
   name:        '',
   attending:   '',
-  plusOne:     '',
-  children:    '',
-  childCount:  '',
+  adultCount:  '1',
+  childCount:  '0',
   dietary:     '',
   songRequest: '',
 };
@@ -118,54 +117,29 @@ export default function RSVP() {
 
               {isAttending && (
                 <>
-                  {/* Plus one */}
-                  <fieldset>
-                    <legend className={labelClass}>{t.rsvp.plusOneLabel}</legend>
-                    <div className="flex gap-6 mt-1">
-                      {[t.rsvp.plusOneYes, t.rsvp.plusOneNo].map(opt => (
-                        <label key={opt} className="flex items-center gap-2 cursor-pointer">
-                          <input
-                            type="radio" name="plusOne" value={opt}
-                            checked={form.plusOne === opt} onChange={handleChange}
-                            className="accent-french-blue w-4 h-4"
-                          />
-                          <span className="font-sans text-sm text-gray-700">{opt}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </fieldset>
+                  {/* Adults */}
+                  <div>
+                    <label htmlFor="rsvp-adultCount" className={labelClass}>{t.rsvp.adultCountLabel}</label>
+                    <select
+                      id="rsvp-adultCount" name="adultCount"
+                      value={form.adultCount} onChange={handleChange}
+                      className={inputClass}
+                    >
+                      {[1, 2].map(n => <option key={n} value={n}>{n}</option>)}
+                    </select>
+                  </div>
 
                   {/* Children */}
-                  <fieldset>
-                    <legend className={labelClass}>{t.rsvp.childrenLabel}</legend>
-                    <div className="flex gap-6 mt-1">
-                      {[t.rsvp.childrenYes, t.rsvp.childrenNo].map(opt => (
-                        <label key={opt} className="flex items-center gap-2 cursor-pointer">
-                          <input
-                            type="radio" name="children" value={opt}
-                            checked={form.children === opt} onChange={handleChange}
-                            className="accent-french-blue w-4 h-4"
-                          />
-                          <span className="font-sans text-sm text-gray-700">{opt}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </fieldset>
-
-                  {/* Child count */}
-                  {form.children === t.rsvp.childrenYes && (
-                    <div>
-                      <label htmlFor="rsvp-childCount" className={labelClass}>{t.rsvp.childCountLabel}</label>
-                      <select
-                        id="rsvp-childCount" name="childCount"
-                        value={form.childCount} onChange={handleChange}
-                        className={inputClass}
-                      >
-                        <option value="" disabled>Select…</option>
-                        {[1, 2, 3, '4+'].map(n => <option key={n} value={n}>{n}</option>)}
-                      </select>
-                    </div>
-                  )}
+                  <div>
+                    <label htmlFor="rsvp-childCount" className={labelClass}>{t.rsvp.childCountLabel}</label>
+                    <select
+                      id="rsvp-childCount" name="childCount"
+                      value={form.childCount} onChange={handleChange}
+                      className={inputClass}
+                    >
+                      {[0, 1, 2, 3].map(n => <option key={n} value={n}>{n}</option>)}
+                    </select>
+                  </div>
 
                   {/* Dietary */}
                   <div>
