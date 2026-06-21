@@ -117,19 +117,19 @@ export default function RSVP() {
                 </div>
               </fieldset>
 
-              {/* Email */}
-              <div>
-                <label htmlFor="rsvp-email" className={labelClass}>{t.rsvp.emailLabel} *</label>
-                <input
-                  id="rsvp-email" name="email" type="email" required
-                  placeholder={t.rsvp.emailPH}
-                  value={form.email} onChange={handleChange}
-                  className={inputClass}
-                />
-              </div>
-
               {isAttending && (
                 <>
+                  {/* Email */}
+                  <div>
+                    <label htmlFor="rsvp-email" className={labelClass}>{t.rsvp.emailLabel} *</label>
+                    <input
+                      id="rsvp-email" name="email" type="email" required
+                      placeholder={t.rsvp.emailPH}
+                      value={form.email} onChange={handleChange}
+                      className={inputClass}
+                    />
+                  </div>
+
                   {/* Mailing Address */}
                   <div>
                     <label htmlFor="rsvp-address" className={labelClass}>{t.rsvp.addressLabel} *</label>
