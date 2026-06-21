@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-gray-800 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+  }
+
+  /* Focus ring for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold;
+  }
+}
+
+@layer components {
+  /* Reusable section heading block */
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl text-navy font-light tracking-wide text-center leading-tight;
+  }
+
+  .section-subtitle {
+    @apply font-serif italic text-xl text-french-blue text-center;
+  }
+
+  .gold-divider {
+    @apply w-14 h-px bg-gold mx-auto my-5;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply inline-block px-8 py-3 bg-navy text-ivory font-sans text-xs uppercase tracking-widest
+           hover:bg-french-blue transition-colors duration-300 focus-visible:outline-gold;
+  }
+
+  .btn-outline {
+    @apply inline-block px-8 py-3 border border-ivory/70 text-ivory font-sans text-xs uppercase
+           tracking-widest hover:bg-ivory/10 transition-colors duration-300;
+  }
+
+  .btn-outline-dark {
+    @apply inline-block px-8 py-3 border border-navy text-navy font-sans text-xs uppercase
+           tracking-widest hover:bg-navy hover:text-ivory transition-colors duration-300;
+  }
+
+  /* Card base */
+  .card {
+    @apply bg-white rounded-sm shadow-sm p-6 md:p-8 hover:shadow-md transition-shadow duration-300;
+  }
+}
+
+/* Scroll-reveal animation classes (toggled by IntersectionObserver in useScrollAnimation) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: none; }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.15s; opacity: 1; transform: none; }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.25s; opacity: 1; transform: none; }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.35s; opacity: 1; transform: none; }
+.reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.45s; opacity: 1; transform: none; }
+.reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.55s; opacity: 1; transform: none; }

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/Daniela Ferreira/AppData/Roaming/**)",
+      "Read(//c/Users/Daniela Ferreira/**)",
+      "Read(//usr/local/**)",
+      "Bash(ls \"/c/Program Files/\" 2>/dev/null | head -30; ls \"/c/Users/Daniela Ferreira/AppData/Roaming/\" 2>/dev/null | grep -i node; find /c/Users -name \"npm.cmd\" 2>/dev/null | head -5)",
+      "Bash(rm -rf \"/c/Users/Daniela Ferreira/.claude/Wedding/node_modules\" && echo \"Cleaned.\")"
+    ]
+  }
+}
