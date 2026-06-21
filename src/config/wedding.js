@@ -31,7 +31,7 @@ export const wedding = {
   storyTimeline: [
     { year: 'Fall 2024',    label: 'The Beginning',        detail: 'Two PhD students at Texas Tech, different departments, different worlds — one unexpected spark in Lubbock, TX.',                        image: null },
     { year: 'Sep 21, 2024', label: 'First Date',            detail: 'J&B Café, a rainy afternoon. A chai latte, a cold brew, a blueberry muffin. We talked until we forgot there was anywhere else to be.', image: null },
-    { year: 'Dec 2024',     label: 'Flagstaff & Las Vegas', detail: 'First road trip together — Lubbock to Flagstaff to Vegas. The first time Dani saw Jed\'s city.',                                        image: null },
+    { year: 'Dec 2024',     label: 'Flagstaff & Las Vegas', detail: 'First road trip together — Lubbock to Flagstaff to Vegas. The first time Dani saw Jed\'s city.',                                        image: '/images/flagstaff.jpg' },
     { year: 'Lubbock',      label: 'Lubbock Days',          detail: 'Coffee runs, late nights in the lab, Lubbock sunsets, and building our everyday life together.',                                          image: null },
     { year: '2025',         label: 'Jed\'s Graduation',     detail: 'We celebrated Jed finishing his PhD. One less person in the office, way more reason to celebrate.',                                       image: null },
     { year: '2025',         label: 'Omaha',                 detail: 'First time in Omaha together. New city, new memories, same us.',                                                                          image: null },
@@ -220,14 +220,14 @@ export const wedding = {
   // Replace null with a path like '/images/photo1.jpg'
   // Put your images in the /public/images/ folder.
   gallery: [
-    { src: null, alt: 'First date at J&B Café, Lubbock — September 21, 2024', ratio: '4/3' },
-    { src: null, alt: 'Lubbock sunsets',                                        ratio: '3/4' },
-    { src: null, alt: 'December road trip — somewhere in the desert',           ratio: '4/3' },
-    { src: null, alt: 'Flagstaff stop — December 2024',                         ratio: '1/1' },
-    { src: null, alt: 'Arriving in Las Vegas',                                  ratio: '4/3' },
-    { src: null, alt: 'Tehachapi Trail, 2026',                                  ratio: '3/4' },
-    { src: null, alt: 'At the top of the trail',                                ratio: '4/3' },
-    { src: null, alt: 'A regular Tuesday that turned into a great memory',      ratio: '1/1' },
+    { src: '/images/cornmaze.jpg',      alt: 'Second date at the corn maze',                         ratio: '4/3' },
+    { src: '/images/buddy-holly.jpg',   alt: 'Buddy Holly, Lubbock TX',                              ratio: '3/4' },
+    { src: '/images/farmers-market.jpg',alt: 'Farmers market',                                       ratio: '4/3' },
+    { src: '/images/flagstaff.jpg',     alt: 'Flagstaff, Arizona',                                   ratio: '1/1' },
+    { src: '/images/bandeja-paisa.jpg', alt: 'Jed trying bandeja paisa for the first time',          ratio: '4/3' },
+    { src: '/images/paintings.jpg',     alt: 'Painting together',                                    ratio: '3/4' },
+    { src: null, alt: 'First date at J&B Café, September 21 2024',             ratio: '4/3' },
+    { src: null, alt: 'Arriving in Las Vegas',                                  ratio: '1/1' },
     { src: null, alt: 'The two of us',                                          ratio: '4/3' },
   ],
 
