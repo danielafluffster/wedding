@@ -21,7 +21,7 @@ export const i18n = {
     },
 
     hero: {
-      preheading:  "We're getting married — and we want you there",
+      preheading:  "We're getting married — and we would love you to be there",
       dateTBD:     'Las Vegas, Nevada · Date to Be Announced',
       dateTBDNote: "We're planning something beautiful — stay tuned!",
       countingDown:'Counting down to forever',
@@ -287,7 +287,7 @@ export const i18n = {
     },
 
     hero: {
-      preheading:  'Nos casamos — y queremos que estés ahí',
+      preheading:  'Nos casamos — y nos encantaría que estuvieras ahí',
       dateTBD:     'Las Vegas, Nevada · Fecha por Anunciar',
       dateTBDNote: 'Estamos planeando algo hermoso — ¡estate atento!',
       countingDown:'Contando los días para siempre',
