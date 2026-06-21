@@ -5,8 +5,9 @@ import { useT } from '../hooks/useT';
 
 const INITIAL = {
   name:           '',
-  mailingAddress: '',
   attending:      '',
+  email:          '',
+  mailingAddress: '',
   adultCount:     '1',
   childCount:     '0',
   dietary:        '',
@@ -115,6 +116,17 @@ export default function RSVP() {
                   ))}
                 </div>
               </fieldset>
+
+              {/* Email */}
+              <div>
+                <label htmlFor="rsvp-email" className={labelClass}>{t.rsvp.emailLabel} *</label>
+                <input
+                  id="rsvp-email" name="email" type="email" required
+                  placeholder={t.rsvp.emailPH}
+                  value={form.email} onChange={handleChange}
+                  className={inputClass}
+                />
+              </div>
 
               {isAttending && (
                 <>
