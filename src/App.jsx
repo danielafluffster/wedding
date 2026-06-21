@@ -1,4 +1,4 @@
-import { useEffect, lazy, Suspense } from 'react';
+import { useEffect } from 'react';
 import { useLanguage } from './context/LanguageContext';
 import LanguagePicker from './components/LanguagePicker';
 import Nav from './components/Nav';
@@ -7,15 +7,14 @@ import OurStory from './components/OurStory';
 import EventDetails from './components/EventDetails';
 import Schedule from './components/Schedule';
 import RSVP from './components/RSVP';
-
-const Travel     = lazy(() => import('./components/Travel'));
-const ThingsToDo = lazy(() => import('./components/ThingsToDo'));
-const Registry   = lazy(() => import('./components/Registry'));
-const DressCode  = lazy(() => import('./components/DressCode'));
-const FAQ        = lazy(() => import('./components/FAQ'));
-const Gallery    = lazy(() => import('./components/Gallery'));
-const PhotoShare = lazy(() => import('./components/PhotoShare'));
-const Footer     = lazy(() => import('./components/Footer'));
+import Travel from './components/Travel';
+import ThingsToDo from './components/ThingsToDo';
+import Registry from './components/Registry';
+import DressCode from './components/DressCode';
+import FAQ from './components/FAQ';
+import Gallery from './components/Gallery';
+import PhotoShare from './components/PhotoShare';
+import Footer from './components/Footer';
 
 function dismissLoader() {
   const el = document.getElementById('loading-screen');
@@ -50,18 +49,16 @@ export default function App() {
         <EventDetails />
         <Schedule />
         <RSVP />
-        <Suspense fallback={null}>
-          <Travel />
-          <ThingsToDo />
-          <Registry />
-          <DressCode />
-          <FAQ />
-          <Gallery />
-          <PhotoShare />
-        </Suspense>
+        <Travel />
+        <ThingsToDo />
+        <Registry />
+        <DressCode />
+        <FAQ />
+        <Gallery />
+        <PhotoShare />
       </main>
 
-      <Suspense fallback={null}><Footer /></Suspense>
+      <Footer />
     </>
   );
 }
