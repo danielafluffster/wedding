@@ -5,14 +5,8 @@ import { useT } from '../hooks/useT';
 function TimelineItem({ year, label, detail, image, index }) {
   const isLeft = index % 2 === 0;
 
-  const Dot = ({ mobile }) => image ? (
-    <div className={`rounded-full overflow-hidden ring-2 ring-gold/50 shadow-md flex-shrink-0
-      ${mobile ? 'w-8 h-8 mt-0.5' : 'w-11 h-11'}`}>
-      <img src={image} alt={label} className="w-full h-full object-cover" />
-    </div>
-  ) : (
-    <div className={`rounded-full bg-gold border-2 border-ivory shadow-sm flex-shrink-0
-      ${mobile ? 'w-2.5 h-2.5 mt-1.5' : 'w-3 h-3 mt-1'}`} />
+  const Dot = () => (
+    <div className="rounded-full bg-gold border-2 border-ivory shadow-sm flex-shrink-0 w-3 h-3 mt-1" />
   );
 
   return (
@@ -21,14 +15,19 @@ function TimelineItem({ year, label, detail, image, index }) {
         <p className="font-sans text-[11px] uppercase tracking-widest text-gold mb-1">{year}</p>
         <h3 className="font-serif text-xl text-navy mb-1">{label}</h3>
         <p className="font-sans text-sm text-gray-600 leading-relaxed">{detail}</p>
+        {image && (
+          <div className={`mt-3 rounded-sm overflow-hidden shadow-md aspect-[4/3] max-w-xs ${isLeft ? 'md:ml-auto' : ''}`}>
+            <img src={image} alt={label} className="w-full h-full object-cover" />
+          </div>
+        )}
       </div>
 
       <div className="hidden md:flex flex-col items-center flex-shrink-0 w-14">
-        <Dot mobile={false} />
+        <Dot />
       </div>
 
-      <div className="md:hidden flex-shrink-0 flex flex-col items-center">
-        <Dot mobile={true} />
+      <div className="md:hidden flex-shrink-0 flex flex-col items-center mt-1">
+        <Dot />
       </div>
 
       <div className="flex-1 hidden md:block" />
@@ -66,10 +65,10 @@ export default function OurStory() {
           )}
 
           <div className="grid grid-cols-2 gap-4 mt-10">
-            <div className="relative aspect-[4/5] rounded-sm overflow-hidden">
+            <div className="relative aspect-square rounded-sm overflow-hidden">
               <img src="/images/buddy-holly.jpg" alt="Buddy Holly, Lubbock TX" className="w-full h-full object-cover" />
             </div>
-            <div className="relative aspect-[4/5] rounded-sm overflow-hidden bg-gradient-to-br from-french-blue to-navy flex items-end">
+            <div className="relative aspect-square rounded-sm overflow-hidden bg-gradient-to-br from-french-blue to-navy flex items-end">
               <p className="font-sans text-xs text-ivory/60 p-3 text-center w-full">{t.story.photoLabel}</p>
             </div>
           </div>
