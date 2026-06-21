@@ -4,12 +4,13 @@ import { wedding } from '../config/wedding';
 import { useT } from '../hooks/useT';
 
 const INITIAL = {
-  name:        '',
-  attending:   '',
-  adultCount:  '1',
-  childCount:  '0',
-  dietary:     '',
-  songRequest: '',
+  name:           '',
+  mailingAddress: '',
+  attending:      '',
+  adultCount:     '1',
+  childCount:     '0',
+  dietary:        '',
+  songRequest:    '',
 };
 
 export default function RSVP() {
@@ -95,6 +96,17 @@ export default function RSVP() {
                   placeholder={t.rsvp.namePlaceholder}
                   value={form.name} onChange={handleChange}
                   className={inputClass}
+                />
+              </div>
+
+              {/* Mailing Address */}
+              <div>
+                <label htmlFor="rsvp-address" className={labelClass}>{t.rsvp.addressLabel} *</label>
+                <textarea
+                  id="rsvp-address" name="mailingAddress" required rows={3}
+                  placeholder={t.rsvp.addressPH}
+                  value={form.mailingAddress} onChange={handleChange}
+                  className={`${inputClass} resize-none`}
                 />
               </div>
 
