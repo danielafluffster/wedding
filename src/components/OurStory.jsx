@@ -66,17 +66,12 @@ export default function OurStory() {
           )}
 
           <div className="grid grid-cols-2 gap-4 mt-10">
-            {[
-              { bg: 'from-dusty-blue to-french-blue' },
-              { bg: 'from-french-blue to-navy' },
-            ].map((p, i) => (
-              <div
-                key={i}
-                className={`relative aspect-[4/5] rounded-sm overflow-hidden bg-gradient-to-br ${p.bg} flex items-end`}
-              >
-                <p className="font-sans text-xs text-ivory/60 p-3 text-center w-full">{t.story.photoLabel}</p>
-              </div>
-            ))}
+            <div className="relative aspect-[4/5] rounded-sm overflow-hidden">
+              <img src="/images/buddy-holly.jpg" alt="Buddy Holly, Lubbock TX" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative aspect-[4/5] rounded-sm overflow-hidden bg-gradient-to-br from-french-blue to-navy flex items-end">
+              <p className="font-sans text-xs text-ivory/60 p-3 text-center w-full">{t.story.photoLabel}</p>
+            </div>
           </div>
 
           <blockquote className="border-l-2 border-gold pl-5 mt-8 font-serif italic text-lg text-french-blue text-left">
